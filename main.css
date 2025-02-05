@@ -1,0 +1,79 @@
+:root {
+    /* witruimte */
+    --gap--large: 2rem;
+    --gap--small: .2rem;
+    /* fonts */
+    --font--large: 1.7rem;
+    --font--small: .9rem; 
+    /* randen */
+    --border: .1rem dotted rgba(5, 7, 2, 0.4) ;
+    --shadow: .1rem .1rem .05rem rgba(5, 7, 2, 0.2);
+    /* kleuren */
+    --green: green;
+    --red: red;
+    --white: whitesmoke;
+    --dark: rgb(68, 68, 68);
+}
+
+body {
+ font-family: 'Courier New', Courier, monospace;
+ display: flex;
+ flex-direction: column;
+ gap: var(--gap--large);
+ margin: var(--gap--large) ;
+}
+
+#parking-data {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.parking {
+    border: var(--border) ;
+    border-radius: .5rem;
+    flex-grow: 1;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: box-shadow .2s ease-in-out;
+    padding: var(--gap--large);
+}
+
+.parking:hover {
+    box-shadow: none;
+}
+
+h1 {
+   font-size: var(--font--large);
+   color: var(--white);
+   background-color: var(--dark);  
+   padding: var(--gap--large);
+   text-align: center;
+}
+
+h2 {
+    font-size: var(--font--large);
+}
+
+p {
+    font-size: var(--font--small);
+}
+
+.open, .gesloten {
+    display: inline-block;
+    border-radius: .2rem;
+    padding: var(--gap--large);
+}
+
+.open {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.gesloten {
+    background-color: var(--red);
+    color: var(--white);
+}
